@@ -3,6 +3,9 @@
 #include "ofxCvFloatImage.h"
 #include "ofxCvShortImage.h"
 
+#define cvCvtPixToPlane cvSplit
+#define cvCvtPlaneToPix cvMerge
+
 
 //--------------------------------------------------------------------------------
 ofxCvColorImage::ofxCvColorImage() {

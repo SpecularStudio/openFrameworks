@@ -1,6 +1,7 @@
 
 #include "ofxCvContourFinder.h"
 
+typedef int CvContourRetrievalMode;
 
 
 //--------------------------------------------------------------------------------

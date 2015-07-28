@@ -6,7 +6,7 @@
 #include "ofxCvBlob.h"
 
 
-
+#define cvWarpPerspectiveQMatrix cvGetPerspectiveTransform
 
 
 //--------------------------------------------------------------------------------
@@ -687,7 +687,7 @@ void ofxCvImage::undistort( float radialDistX, float radialDistY,
 	}							
     float camIntrinsics[] = { focalX, 0, centerX, 0, focalY, centerY, 0, 0, 1 };
     float distortionCoeffs[] = { radialDistX, radialDistY, tangentDistX, tangentDistY };
-    cvUnDistortOnce( cvImage, cvImageTemp, camIntrinsics, distortionCoeffs, 1 );
+//    cvUnDistortOnce( cvImage, cvImageTemp, camIntrinsics, distortionCoeffs, 1 );
 	swapTemp();
     flagImageChanged();
 }
